@@ -9,7 +9,7 @@ const audio1 = document.getElementById('audio1');
       const audio9 = document.getElementById('audio9');
       const audio10 = document.getElementById('audio10');
 
-      // Escuchar el evento 'ended' de cada audio
+      // EL KUELGUE
       audio1.addEventListener('ended', () => {
           audio2.play();
       });
@@ -38,5 +38,8 @@ const audio1 = document.getElementById('audio1');
     });
     audio9.addEventListener('ended', () => {
         audio10.play();
+    });
+    audio10.addEventListener('ended', () => {
+        audio1.play(); 
     });
  
