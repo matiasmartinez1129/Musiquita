@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/img-sm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-flex {
+    
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 200px;
+    flex-wrap: wrap;
+    gap: 60px;
+   
+
+    
+}
+
+.bg {
+    background: rgba(0, 0, 0, 0.685);;
+	backdrop-filter: 0.4rem;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px 5px;
+}
+
+
+
+.music {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 50px;
+  
+}
+
+
+.music img {
+    width: 150px;
+    height: 150px;
+    border-radius: 70%;
+}
+.music h1,h2,h3,h4 {
+    font-size: 25px;
+    color: #fff;
+}
+
+.edit-card {
+    background-color: rgba(0, 0, 0, 0.767);
+    border-radius: 10px;
+    display: flex;
+}
+
+.music img {
+    animation: circle 5s linear infinite;
+}
+
+@keyframes circle {
+    0%{
+       transform: rotate(0deg) ; 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes show {
+	from {
+		opacity: 0;
+		scale: 30%;
+	}
+
+	to {
+		opacity: 1;
+		scale: 100%;
+	}
+}
+
+.bg{
+	view-timeline-name: --image;
+	view-timeline-axis: block;
+
+	animation-timeline: --image;
+	animation-name: show;
+
+	animation-range: entry 25% cover 30%;
+	animation-fill-mode: both;
+    
+}
+
+@media only screen and (max-width: 677px){
+
+  body {
+    background-image: url(../img/img-sm-mobile.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+  }
+    
+}
